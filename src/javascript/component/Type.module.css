@@ -1,0 +1,26 @@
+.title{
+    color:var(--primary-02);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--space-lg) 0
+}
+
+
+.subtitle{
+    color:var(--black);
+    font-weight: var(--font-weight-light);
+}
+
+.bold{
+    font-weight: var(--font-weight-bold);
+    display: inline-block;
+}
+
+.nomargin{
+    margin:0;
+}
+
+.para{
+    font-size: var(--text-sm);
+    color:var(--black);
+    
+}

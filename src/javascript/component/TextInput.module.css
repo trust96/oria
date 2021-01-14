@@ -1,0 +1,21 @@
+.label{
+    display: block;
+    text-transform: capitalize;
+    margin-bottom: var(--space-sm);
+    padding: 0 var(--space-md);
+}
+
+.input{
+    display: block;
+    border-radius: var(--border-radius-lg);
+    border: var(--border-line) solid transparent;
+    background-color: var(--gray-00);
+    width: 80%;
+    height: 48px;
+    padding: 0 var(--space-md);
+}
+.input:focus,.input:hover{
+    border: var(--border-line) solid var(--gray-02);
+    outline: none;
+    transition: border linear .25s;
+}
