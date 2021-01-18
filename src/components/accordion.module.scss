@@ -1,0 +1,38 @@
+.accordionbutton{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-04) var(--space-04);
+    background-color: var(--gray-00);
+    border-radius: var(--border-radius-02);
+}
+.accordionbutton:hover{
+background-color: var(--gray-03);
+}
+.accordionbutton:active{
+    background-color: var(--white);
+   
+}
+.accordionbutton:focus{
+    outline: none;
+box-shadow: 0 0 0 var(--border-line) var(--white),
+0 0 0 calc(var(--border-line)*2) var(--gray-02);
+}
+.text{
+    padding:var(--space-02) var(--space-04);
+
+}
+.accordiontext{
+    max-height: 0px;
+    overflow:hidden;
+    opacity: 0;
+    transition: max-height ease-in .25s, opacity ease-in .25s;
+
+}
+
+.accordiontextcollapse{
+    max-height: 4000px;
+    opacity: 1;
+    transition: max-height ease-out .25s,opacity ease-out .25s;
+
+}

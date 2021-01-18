@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
+/* colors*/
+:root{
+--primary-01: #a3cfbb;
+--primary-02: #479f76;
+--primary-03: #198754;
+--primary-04:#0f5132;
+
+--white:#fff;
+ --gray-00:#e6e6e6;
+ --gray-01:#cccccc;
+ --gray-02: #b3b3b3;
+ --gray-03:#999999;
+ --gray-04: #808080;
+ --gray-05: #666666;
+ --gray-06: #4d4d4d;
+ --black: #191919;
+
+ --danger:var(--red);
+ --warning:var(--yellow);
+ --success:var(--green);
+}
+
+/* space */
+:root{
+    --space-unit: 1rem;
+
+    --space-01:  calc(0.25 * var(--space-unit));
+    --space-02:   calc(0.5 * var(--space-unit));                 
+    --space-03:   calc(0.75 * var(--space-unit));              
+    --space-04:   calc(1.25 * var(--space-unit));             
+    --space-05:   calc(2 * var(--space-unit));                  
+    --space-06:   calc(3.25 * var(--space-unit));             
+    --space-07:  calc(5.25 * var(--space-unit));  
+
+}
+
+/* type */
+
+:root{
+--font-family:'Montserrat', sans-serif;
+
+--font-weight-light:400;
+--font-weight-normal:500;
+--font-weight-bold:600;
+
+
+--text-base-size: 1rem;
+
+--text-scale-ratio: 1.25;
+
+ --text-01: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+
+    --text-02: calc(var(--text-base-size) / var(--text-scale-ratio));
+
+    --text-03: calc(var(--text-base-size) * var(--text-scale-ratio));
+    
+    --text-04: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-05: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-06: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+}
+
+/* misc*/
+
+:root{
+--border-radius-01:10px;
+--border-radius-02:25px;
+--border-radius-03:50px;
+--border-line:1px;
+}
