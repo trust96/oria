@@ -4,4 +4,4 @@ const ContextName = React.createContext()
 const ContextProvider= ContextName.Provider;
 const ContextConsumer= ContextName.Consumer;
 
-export { ContextConsumer, ContextProvider };
+export { ContextName, ContextConsumer, ContextProvider };

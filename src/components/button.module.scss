@@ -8,6 +8,7 @@
     text-transform: capitalize;
     font-size: var(--text-03);
     font-weight: var(--font-weight-bold);
+    cursor:pointer;
 }
 .primary{
     composes:default;

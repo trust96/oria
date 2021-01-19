@@ -27,3 +27,8 @@ display: block;
 
 }
 
+.button{
+    display: flex;
+    justify-content: end;
+    padding: var(--space-03)
+}

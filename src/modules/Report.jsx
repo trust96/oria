@@ -27,6 +27,10 @@ export class Report extends Component {
   render() {
     return (
       <>
+            <div 
+            className={styles.button}
+            ><Button primary>sign out</Button></div>
+
         <h1 className={`title title--primary`}>
           {" "}
           Welcome back,
