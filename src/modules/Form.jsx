@@ -24,7 +24,7 @@ class Form extends Component {
 
         <div className={`${styles.container}`}>
           <form className={`${styles.content}`} onSubmit={this.handleSubmit} action="">
-            <Input callback={this.handleChange} login type="text"> UserName</Input>
+            <Input callback={this.handleChange} login type="text"> Username</Input>
             <Input callback={this.handleChange} login type="password"> Password</Input>
             <Button primary fullwidth type="submit">
               Login
