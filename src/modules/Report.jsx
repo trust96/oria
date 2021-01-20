@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import Button from "../components/Button";
 import { writeReport } from "../firebase/database";
 import styles from "./Report.module.scss";
+import { signOut } from "../firebase/auth";
+import { withRouter } from "react-router-dom";
+
 export class Report extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      report : null
+      report : null,
+      reportSupport: false,
     };
   }
   handleChange = (e) => {
@@ -21,15 +25,22 @@ export class Report extends Component {
       report: this.state.report,
       date: new Date().toLocaleString()
     }
-    writeReport(report)
+    writeReport(report);
+    this.setState({reportSupport:true});
+    e.target.reset()
   }
+  snOut=()=>{
+    signOut()
+    this.props.history.push('/');
 
+  }
   render() {
     return (
       <>
             <div 
             className={styles.button}
-            ><Button primary>sign out</Button></div>
+            onClick={this.snOut}>
+            <Button primary>sign out</Button></div>
 
         <h1 className={`title title--primary`}>
           {" "}
@@ -46,7 +57,8 @@ export class Report extends Component {
               id="report"
               onChange={this.handleChange}
             />
-            <Button primary> Submit </Button>
+            <p className={`${this.state.reportSupport? styles.reportblock: styles.reportnone}`}> The report was sent successfully </p>
+            <Button primary> Submit</Button>
           </div>
         </form>
       </>
@@ -54,4 +66,4 @@ export class Report extends Component {
   }
 }
 
-export default Report;
+export default withRouter(Report) ;

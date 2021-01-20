@@ -4,7 +4,7 @@ import styles from "./Form.module.scss";
 import Input from "../components/Input";
 import { ContextConsumer } from "../global/context";
 import { signIn } from "../firebase/auth";
-
+import { withRouter } from 'react-router-dom'
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +22,14 @@ class Form extends Component {
   handleSubmit=(e)=>{
     e.preventDefault()
     signIn(this.state.email, this.state.password)
+    e.target.reset();
+    if (this.state.email === 'ekohaugustine@yahoo.com'){
+          this.props.history.push('/admin');
 
+    } else
+    {
+      this.props.history.push('/report')
+    }
   }
   render() {
     return (
@@ -32,7 +39,7 @@ class Form extends Component {
           value => <div>{value}</div>
         }
       </ContextConsumer>
-      <h1 className={`title title--primary`}> Welcome to oriabure farms limited {this.state.password} </h1>
+      <h1 className={`title title--primary`}> Welcome to oriabure farms limited </h1>
       <div className="">
       <p className="subtitle"> please <strong>sign in</strong> and submit your report</p>
 
@@ -51,4 +58,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default withRouter(Form);

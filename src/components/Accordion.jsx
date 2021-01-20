@@ -22,7 +22,10 @@ export default class Accordion extends Component {
             onClick={this.collapse}
             >
                 <span>{this.props.date}</span>
-            <Button delete>Delete</Button> 
+            <div>
+                <div><strong>Reported by:</strong></div>
+                happy
+            </div>
             </div>
             <p 
             className={`${this.state.collapse?styles.accordiontext:styles.accordiontextcollapse} ${styles.text}`}

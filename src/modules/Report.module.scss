@@ -32,3 +32,16 @@ display: block;
     justify-content: end;
     padding: var(--space-03)
 }
+
+.reportblock{
+    color:var(--primary-03);
+    display: inline-block;
+    margin-bottom: var(--space-01);
+position: relative;
+right:-533px;
+}
+
+.reportnone{
+visibility: hidden;
+margin-bottom: var(--space-01);
+}

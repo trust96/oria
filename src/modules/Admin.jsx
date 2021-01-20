@@ -4,6 +4,8 @@ import styles from "./Admin.module.scss";
 import firebase from "../firebase/firebase";
 import Button from "../components/Button";
 import { signOut } from "../firebase/auth";
+import { withRouter } from 'react-router-dom'
+
 const db = firebase.firestore();
 const collection = db.collection("Admin");
 
@@ -38,6 +40,8 @@ export class Admin extends Component {
   }
   snOut=()=>{
     signOut()
+    this.props.history.push('/');
+
   }
   render() {
     let displayAccordion = this.state.report.map((data) => {
@@ -68,4 +72,4 @@ export class Admin extends Component {
   }
 }
 
-export default Admin;
+export default withRouter(Admin);
